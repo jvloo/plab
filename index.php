@@ -1,4 +1,18 @@
 <?php
+/*
+ *---------------------------------------------------------------
+ * APPLICATION ENVIRONMENT
+ *---------------------------------------------------------------
+ */
+ define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+
+/*
+ *---------------------------------------------------------------
+ * OFFLINE MODE
+ *---------------------------------------------------------------
+ */
+ define('OFFLINE', false);
+
 /**
  * CodeIgniter
  *
@@ -53,7 +67,7 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
-	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+	//define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
 
 /*
  *---------------------------------------------------------------
@@ -91,33 +105,13 @@ switch (ENVIRONMENT)
 
 /*
  *---------------------------------------------------------------
- * Path to core folder.
- *---------------------------------------------------------------
- *
- * This folder contains all source files including Codeigniter's core.
- */
- $src_folder = 'src/';
-
- /*
- *---------------------------------------------------------------
- * Path to Plab's core folder.
- *---------------------------------------------------------------
- *
- * This folder contains all files that override or extend
- * CodeIgniter core classes and files.
- *
- */
- $plab_folder = $src_folder . 'plab';
-
-/*
- *---------------------------------------------------------------
  * SYSTEM DIRECTORY NAME
  *---------------------------------------------------------------
  *
  * This variable must contain the name of your "system" directory.
  * Set the path if it is not in the same directory as this file.
  */
-	$system_path = $src_folder . 'codeigniter';
+	$system_path = 'system/codeigniter';
 
 /*
  *---------------------------------------------------------------
@@ -134,7 +128,7 @@ switch (ENVIRONMENT)
  *
  * NO TRAILING SLASH!
  */
-	$application_folder = $plab_folder;
+	$application_folder = 'system/plab';
 
 /*
  *---------------------------------------------------------------
