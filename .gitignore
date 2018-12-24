@@ -32,6 +32,5 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 
 # Plab
 /reference/
-/tmp/cache/
-/tmp/log/
+/tmp/
 /vendor/
