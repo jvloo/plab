@@ -20,7 +20,6 @@
  */
 	$root_folder = '';
 
-
 /**
  * CodeIgniter
  *
