@@ -13,6 +13,14 @@
  */
  define('OFFLINE', false);
 
+/*
+ *---------------------------------------------------------------
+ * ROOT DIRECTORY NAME
+ *---------------------------------------------------------------
+ */
+	$root_folder = '';
+
+
 /**
  * CodeIgniter
  *
@@ -111,7 +119,7 @@ switch (ENVIRONMENT)
  * This variable must contain the name of your "system" directory.
  * Set the path if it is not in the same directory as this file.
  */
-	$system_path = 'system/codeigniter';
+	$system_path = $root_folder . '/system/codeigniter';
 
 /*
  *---------------------------------------------------------------
@@ -128,7 +136,7 @@ switch (ENVIRONMENT)
  *
  * NO TRAILING SLASH!
  */
-	$application_folder = 'system/plab';
+	$application_folder = $root_folder . '/system/plab';
 
 /*
  *---------------------------------------------------------------
@@ -281,6 +289,9 @@ switch (ENVIRONMENT)
 	}
 
 	define('APPPATH', $application_folder.DIRECTORY_SEPARATOR);
+
+  define('ROOTPATH', $root_folder.DIRECTORY_SEPARATOR); // Added by Xavier, 20181224.
+
 
 	// The path to the "views" directory
 	if ( ! isset($view_folder[0]) && is_dir(APPPATH.'views'.DIRECTORY_SEPARATOR))
