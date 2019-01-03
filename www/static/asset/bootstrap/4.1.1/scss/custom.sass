@@ -1,0 +1,9 @@
+$theme-colors: (
+  "blue": #5596E6,
+  "pink": #FFEFED,
+);
+
+// Generate `.bg-*` color utilities
+@each $color, $value in $theme-colors {
+  @include bg-variant('.bg-#{$color}', $value);
+}
